@@ -1,4 +1,5 @@
 import { replaceElectiveSubjects } from "utils/timetable"
+import { Art, Foreign, ElecA, ElecB, ElecC, ElecD } from "define/subjects"
 
 const mockTimetable = {
   "Grade": 2,
@@ -295,12 +296,12 @@ const getTimetable = () => mockTimetable
 const mockElectiveSubjectsToUser = {
     UserID: "blarblar",
     ElectiveSubjectIDs: {
-        64: 0,
-        16: 2,
-        8: 3,
-        4: 4,
-        2: 5,
-        1: 6,
+        [Art]: 0,
+        [Foreign]: 2,
+        [ElecA]: 3,
+        [ElecB]: 4,
+        [ElecC]: 5,
+        [ElecD]: 6,
     }
 }
 

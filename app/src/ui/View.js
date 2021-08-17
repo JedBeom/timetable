@@ -5,10 +5,10 @@ import Header from "ui/Header"
 import { NtoBr } from "utils/html"
 
 const handleScroll = (setScrolled) => {
-    return () => setScrolled(window.scrollY > 30)
+    return () => setScrolled(window.scrollY > 40)
 }
 
-const View = ({title, children}) => {
+const View = ({icon, title, children}) => {
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
@@ -22,16 +22,16 @@ const View = ({title, children}) => {
 
     return <>
     <Header scrolled={scrolled} title={title}/>
-     <Wrapper>
-        {title ? <Title>{NtoBr(title)}</Title> : null }
+     <Contents>
+        {title ? <Title>{icon} {NtoBr(title)}</Title> : null }
         {children}
-    </Wrapper>
+    </Contents>
     </>
 }
 
-const Wrapper = styled.div`
+const Contents = styled.div`
 margin: 0 auto;
-padding: 0 .75rem .75rem .75rem;
+padding: 0 .75rem 5rem .75rem;
 max-width: 600px;
 font-size: 1rem;
 

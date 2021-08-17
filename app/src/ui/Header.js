@@ -8,10 +8,15 @@ const Header = ({title, scrolled}) => {
 
 const Div = styled.div`
 background-color: ${({theme}) => theme.bg};
+background-size: 100%;
+
+width: 100%auto;
 
 display: flex;
 align-items: center;
 justify-content: center;
+
+overflow: hidden;
 
 position: sticky;
 top: 0;
@@ -21,6 +26,8 @@ padding-top: calc(env(safe-area-inset-top) + .5rem);
 
 font-weight: 600;
 font-size: 1.2rem;
+
+z-index: 100;
 
 pointer-events: none;
 

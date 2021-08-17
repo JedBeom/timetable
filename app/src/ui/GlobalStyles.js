@@ -1,12 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-html {
+html, body {
     height: 100%;
     scroll-behavior: smooth;
-}
-#root {
-    height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', Pretendard, Roboto, 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
@@ -18,6 +17,10 @@ body {
     body {
         background-color: #17171B;
     }
+}
+svg {
+    position: relative;
+    top: .15em;
 }
 `
 
