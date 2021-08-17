@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import Td from "components/tables/full/Td"
 import {Times, HangulWorkdays} from "define/times"
-import { Pause, PauseCircle, Play, PlayCircle, Sunrise, Sunset } from "../../../../node_modules/react-feather/dist/index"
+import { Pause, Play } from "../../../../node_modules/react-feather/dist/index"
+import { SkSubjectsWeek } from "define/skeletons"
 
 const Table = ({subjects}) => {
-    if (!subjects) return null
     return <Container>
         <StyledTable>
         <thead>
@@ -34,14 +34,26 @@ const Table = ({subjects}) => {
     </Container>
 }
 
+Table.defaultProps = {
+    subjects: SkSubjectsWeek,
+}
+
 const Workday = styled.td`
 text-align: center;
 min-width: 3.5rem;
 `
 
 const Order = styled.td`
+background-color: ${({theme}) => theme.bg};
+z-index: 50;
+
 font-size: .75em;
 font-weight: 900;
+
+margin-left: 0;
+
+position: sticky;
+left: 0;
 `
 
 const StartAt = styled.p`

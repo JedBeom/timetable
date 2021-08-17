@@ -8,7 +8,7 @@ const handleScroll = (setScrolled) => {
     return () => setScrolled(window.scrollY > 40)
 }
 
-const View = ({icon, title, children}) => {
+const View = ({icon, title, headerLeft, headerRight, children}) => {
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const View = ({icon, title, children}) => {
     }, [])
 
     return <>
-    <Header scrolled={scrolled} title={title}/>
+    <Header left={headerLeft} right={headerRight} scrolled={scrolled} title={title}/>
      <Contents>
         {title ? <Title>{icon} {NtoBr(title)}</Title> : null }
         {children}

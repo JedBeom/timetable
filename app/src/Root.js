@@ -13,7 +13,7 @@ const Root = () => {
     }), [])
 
     return <>
-        <ThemeProvider theme={themes["light"]}>
+        <ThemeProvider theme={themes[theme]}>
             <Wrapper>
                 <Routes/>
             </Wrapper>

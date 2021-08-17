@@ -7,7 +7,8 @@ const theme = {
         },
         text: {
             default: "#212427",
-            primary: "#3262D2" 
+            primary: "#3262D2",
+            sub: "#8D94A0"
         }
     },
     dark: {
@@ -18,7 +19,8 @@ const theme = {
         },
         text: {
             default: "#FFFFFF",
-            primary: "#4884E0" 
+            primary: "#4884E0",
+            sub: "#8D94A0"
         }
     }
 }

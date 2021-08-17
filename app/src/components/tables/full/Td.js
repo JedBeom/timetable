@@ -1,10 +1,13 @@
 import styled from "styled-components"
+import { MapPin, User } from "../../../../node_modules/react-feather/dist/index"
 
 const Td = ({today, subject}) => {
     return <WrapTd>
-        <Name>{subject.ShortName}</Name>    
-        <Teacher>{subject.Teacher}</Teacher>    
-        <Room>{subject.Room}</Room>
+        <WrapDiv>
+            <Name>{subject.ShortName}</Name>    
+            {subject.Teacher ? <Teacher><User/>{subject.Teacher}</Teacher> : null}
+            {subject.Room ? <Room><MapPin/>{subject.Room}</Room> : null}
+        </WrapDiv>
     </WrapTd>
 }
 
@@ -13,10 +16,14 @@ color: ${({theme}) => theme.text.default};
 background-color: ${({theme}) => theme.box.default};
 padding: .4em;
 border-radius: 9px;
-min-width: 3.5rem;
 text-align: center;
 
 word-break: keep-all;
+`
+
+const WrapDiv = styled.div`
+min-width: 3.5rem;
+min-height: 3.5rem;
 `
 
 const Name = styled.p`
