@@ -24,7 +24,7 @@ const getElectiveSubjects = async (Grade) => {
   const {data} = await axios.get(`data/elective-subjects.json`)
   if (!data) throw Error("data is undefined")
 
-  return data.filter(e => e.Grade == Grade)
+  return data.filter(e => e.Grade === Grade)
 }
 
 const getProcessedSubjects = async () => {
