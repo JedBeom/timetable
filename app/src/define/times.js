@@ -1,4 +1,6 @@
-const Times = [
+import { strSesToTime } from "utils/times"
+
+export const SesText = [
     {s: "8:40", e: "9:30"},
     {s: "9:40", e: "10:30"},
     {s: "10:40", e: "11:30"},
@@ -9,8 +11,9 @@ const Times = [
     {s: "16:50", e: "18:00"},
 ]
 
-const HangulWorkdays = [
+// deep clone of SesText
+export const Ses = strSesToTime(JSON.parse(JSON.stringify(SesText)))
+
+export const HangulWorkdays = [
     "", "월", "화", "수", "목", "금"
 ]
-
-export {Times, HangulWorkdays}

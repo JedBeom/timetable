@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import Td from "components/tables/full/Td"
-import {Times, HangulWorkdays} from "define/times"
+import {SesText, HangulWorkdays} from "define/times"
 import { Pause, Play } from "../../../../node_modules/react-feather/dist/index"
 import { SkSubjectsWeek } from "define/skeletons"
 
@@ -8,7 +8,9 @@ const Table = ({subjects}) => {
     return <Container>
         <StyledTable>
         <thead>
-            {HangulWorkdays.map((v, i) => <Workday key={i}>{v}</Workday>)}
+            <tr>
+                {HangulWorkdays.map((v, i) => <Workday key={i}>{v}</Workday>)}
+            </tr>
         </thead>
         <tbody>
             {
@@ -16,13 +18,13 @@ const Table = ({subjects}) => {
                     return <tr key={si}>
                         <Order>
                             {si+1}교시
-                            <StartAt><Play size="1em"/>{Times[si].s}</StartAt>
-                            <EndAt><Pause size="1em"/>{Times[si].e}</EndAt>
+                            <StartAt><Play size="1em"/>{SesText[si].s}</StartAt>
+                            <EndAt><Pause size="1em"/>{SesText[si].e}</EndAt>
                         </Order>
                         {[...Array(subjects.length).keys()].map(di => { // day index
 
                             if (!subjects[di][si]) {
-                                return <td/>
+                                return <td key={`${di}${si}`}/>
                             }
                             return <Td key={`${di}${si}`} subject={subjects[di][si]}/>
                         })}

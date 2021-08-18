@@ -20,8 +20,8 @@ align-items: center;
 position: sticky;
 top: 0;
 left: 0;
-padding: .15rem;
-padding-top: calc(env(safe-area-inset-top) + .15rem);
+padding: .1rem;
+padding-top: calc(env(safe-area-inset-top) + .1rem);
 
 font-weight: 600;
 font-size: 1.2rem;
@@ -52,7 +52,7 @@ flex-flow: row wrap;
 
 const Item = styled.div`
 width: 33.33%;
-margin: .67em auto;
+margin: .25em auto;
 `
 
 const ItemLeft = styled(Item)`
