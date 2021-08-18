@@ -2,7 +2,7 @@ import Page from "pages/tables/Full"
 
 const App = () => {
     return <>
-        <Page/>
+        <Page />
     </>
 }
 

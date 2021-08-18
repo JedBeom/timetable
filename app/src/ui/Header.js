@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const Header = ({title, scrolled, left, right}) => {
+const Header = ({ title, scrolled, left, right }) => {
     return <Div>
         <Contents>
             <ItemLeft>{left}</ItemLeft>
@@ -11,7 +11,7 @@ const Header = ({title, scrolled, left, right}) => {
 }
 
 const Div = styled.div`
-background-color: ${({theme}) => theme.bg};
+background-color: ${({ theme }) => theme.bg};
 
 display: flex;
 justify-content: center;
@@ -32,8 +32,8 @@ z-index: 100;
 const Title = styled.h1`
 font-size: 1rem;
 
-color: ${({theme}) => theme.text.default};
-opacity: ${props => (props.scrolled? "1" : "0")};
+color: ${({ theme }) => theme.text.default};
+opacity: ${props => (props.scrolled ? "1" : "0")};
 transition: opacity .15s;
 transition-timing-function: ease-out;
 

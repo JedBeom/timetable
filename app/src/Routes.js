@@ -7,10 +7,10 @@ import FullView from "pages/tables/Full"
 const Routes = () => {
     return <Router>
         <Switch>
-            <Route path="/new" component={NewRoute}/>
-            <Route path="/card" component={CardView}/>
-            <Route path="/full" component={FullView}/>
-            <Route path="/" exact component={Home}/>
+            <Route path="/new" component={NewRoute} />
+            <Route path="/card" component={CardView} />
+            <Route path="/full" component={FullView} />
+            <Route path="/" exact component={Home} />
         </Switch>
     </Router>
 }

@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import Root from 'Root';
 import reportWebVitals from './reportWebVitals';
 
-import {Normalize} from 'styled-normalize'
+import { Normalize } from 'styled-normalize'
 import GlobalStyles from 'ui/GlobalStyles';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Normalize/>
-    <GlobalStyles/>
-    <Root />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Normalize />
+        <GlobalStyles />
+        <Root />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

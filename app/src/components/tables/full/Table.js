@@ -1,38 +1,38 @@
 import styled from "styled-components"
 import Td from "components/tables/full/Td"
-import {SesText, HangulWorkdays} from "define/times"
+import { SesText, HangulWorkdays } from "define/times"
 import { Pause, Play } from "../../../../node_modules/react-feather/dist/index"
 import { SkSubjectsWeek } from "define/skeletons"
 
-const Table = ({subjects}) => {
+const Table = ({ subjects }) => {
     return <Container>
         <StyledTable>
-        <thead>
-            <tr>
-                {HangulWorkdays.map((v, i) => <Workday key={i}>{v}</Workday>)}
-            </tr>
-        </thead>
-        <tbody>
-            {
-                [...Array(subjects[0].length).keys()].map(si => { // subject index in a day
-                    return <tr key={si}>
-                        <Order>
-                            {si+1}교시
-                            <StartAt><Play size="1em"/>{SesText[si].s}</StartAt>
-                            <EndAt><Pause size="1em"/>{SesText[si].e}</EndAt>
-                        </Order>
-                        {[...Array(subjects.length).keys()].map(di => { // day index
+            <thead>
+                <tr>
+                    {HangulWorkdays.map((v, i) => <Workday key={i}>{v}</Workday>)}
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    [...Array(subjects[0].length).keys()].map(si => { // subject index in a day
+                        return <tr key={si}>
+                            <Order>
+                                {si + 1}교시
+                                <StartAt><Play size="1em" />{SesText[si].s}</StartAt>
+                                <EndAt><Pause size="1em" />{SesText[si].e}</EndAt>
+                            </Order>
+                            {[...Array(subjects.length).keys()].map(di => { // day index
 
-                            if (!subjects[di][si]) {
-                                return <td key={`${di}${si}`}/>
-                            }
-                            return <Td key={`${di}${si}`} subject={subjects[di][si]}/>
-                        })}
-                    </tr>
-                })
-            }
-        </tbody>
-    </StyledTable>
+                                if (!subjects[di][si]) {
+                                    return <td key={`${di}${si}`} />
+                                }
+                                return <Td key={`${di}${si}`} subject={subjects[di][si]} />
+                            })}
+                        </tr>
+                    })
+                }
+            </tbody>
+        </StyledTable>
     </Container>
 }
 
@@ -46,7 +46,7 @@ min-width: 3.5rem;
 `
 
 const Order = styled.td`
-background-color: ${({theme}) => theme.bg};
+background-color: ${({ theme }) => theme.bg};
 z-index: 50;
 
 font-size: .75em;

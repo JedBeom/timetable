@@ -1,4 +1,4 @@
-import {getProcessedSubjects} from "api/api"
+import { getProcessedSubjects } from "api/api"
 import Table from "components/tables/full/Table"
 import { useEffect, useState } from "react"
 import View from "ui/View"
@@ -16,8 +16,8 @@ const FullView = () => {
         get()
     }, [])
 
-    return <View icon={<Clock />} headerLeft={<div/>} headerRight={<SwitchButton to="/card" icon={<Layers/>} text="카드 보기"/>} title="시간표">
-        <Table subjects={subjects}/>
+    return <View icon={<Clock />} headerLeft={<div />} headerRight={<SwitchButton to="/card" icon={<Layers />} text="카드 보기" />} title="시간표">
+        <Table subjects={subjects} />
     </View>
 }
 

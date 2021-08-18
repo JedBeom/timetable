@@ -3,10 +3,10 @@ import { Art, Foreign, ElecA, ElecB, ElecC, ElecD } from "define/subjects"
 import axios from "../../node_modules/axios/index"
 
 const getTimetable = async (Grade, Class) => {
-  const {data} = await axios.get(`data/class-timetables.json`)
-  if (!data) throw Error("data is undefined") 
+  const { data } = await axios.get(`data/class-timetables.json`)
+  if (!data) throw Error("data is undefined")
 
-  return data[Grade-1][Class-1]
+  return data[Grade - 1][Class - 1]
 }
 
 const mockElectiveSubjectsToUser = {
@@ -21,7 +21,7 @@ const mockElectiveSubjectsToUser = {
 const getElectiveSubjectsToUser = () => mockElectiveSubjectsToUser
 
 const getElectiveSubjects = async (Grade) => {
-  const {data} = await axios.get(`data/elective-subjects.json`)
+  const { data } = await axios.get(`data/elective-subjects.json`)
   if (!data) throw Error("data is undefined")
 
   return data.filter(e => e.Grade === Grade)
@@ -35,4 +35,4 @@ const getProcessedSubjects = async () => {
   return timetable
 }
 
-export {getTimetable, getElectiveSubjectsToUser, getElectiveSubjects, getProcessedSubjects}
+export { getTimetable, getElectiveSubjectsToUser, getElectiveSubjects, getProcessedSubjects }

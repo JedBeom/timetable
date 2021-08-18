@@ -1,10 +1,10 @@
 const parseTextToTime = text => {
     let [h, m] = text.split(":").map(t => parseInt(t))
-    return h + (m/60)
+    return h + (m / 60)
 }
 
 const parseDateToTime = date => {
-    return date.getHours() + date.getMinutes()/60
+    return date.getHours() + date.getMinutes() / 60
 }
 
 // se is Object{s: time, e: time} (s for Start, e for End)
@@ -18,10 +18,10 @@ const strSeToTime = se => {
 }
 
 export const strSesToTime = ses => {
-    for (let i=0; i<ses.length; i++) {
+    for (let i = 0; i < ses.length; i++) {
         ses[i] = strSeToTime(ses[i])
     }
-    
+
     return ses
 }
 
@@ -30,7 +30,7 @@ export const isBetween = (se, time) => {
 }
 
 export const sesIndexOf = (ses, time) => {
-    for (let i=0; i<ses.length; i++) {
+    for (let i = 0; i < ses.length; i++) {
         if (isBetween(ses[i], time)) {
             return i
         }

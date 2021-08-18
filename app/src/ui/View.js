@@ -8,24 +8,24 @@ const handleScroll = (setScrolled) => {
     return () => setScrolled(window.scrollY > 40)
 }
 
-const View = ({icon, title, headerLeft, headerRight, children}) => {
+const View = ({ icon, title, headerLeft, headerRight, children }) => {
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
-        document.body.scrollIntoView({behavior: "smooth", block: "start"})
+        document.body.scrollIntoView({ behavior: "smooth", block: "start" })
         setTimeout(() => window.addEventListener("scroll", handleScroll(setScrolled)), 200)
-        
+
         return () => {
             window.removeEventListener("scroll", handleScroll(setScrolled))
         }
     }, [])
 
     return <>
-    <Header left={headerLeft} right={headerRight} scrolled={scrolled} title={title}/>
-     <Contents>
-        {title ? <Title>{icon} {NtoBr(title)}</Title> : null }
-        {children}
-    </Contents>
+        <Header left={headerLeft} right={headerRight} scrolled={scrolled} title={title} />
+        <Contents>
+            {title ? <Title>{icon} {NtoBr(title)}</Title> : null}
+            {children}
+        </Contents>
     </>
 }
 
@@ -35,7 +35,7 @@ padding: 0 .75rem 5rem .75rem;
 max-width: 600px;
 font-size: 1rem;
 
-color: ${({theme}) => theme.text.default}
+color: ${({ theme }) => theme.text.default}
 `
 
 const Title = styled.h1`

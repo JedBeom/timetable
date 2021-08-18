@@ -1,19 +1,19 @@
 import styled from "styled-components"
 import { MapPin, User } from "../../../../node_modules/react-feather/dist/index"
 
-const Td = ({today, subject}) => {
+const Td = ({ today, subject }) => {
     return <WrapTd show={subject.ShortName}>
         <WrapDiv>
-            <Name>{subject.ShortName}</Name>    
-            {subject.Teacher ? <Teacher><User/>{subject.Teacher}</Teacher> : null}
-            {subject.Room ? <Room><MapPin/>{subject.Room}</Room> : null}
+            <Name>{subject.ShortName}</Name>
+            {subject.Teacher ? <Teacher><User />{subject.Teacher}</Teacher> : null}
+            {subject.Room ? <Room><MapPin />{subject.Room}</Room> : null}
         </WrapDiv>
     </WrapTd>
 }
 
 const WrapTd = styled.td`
-color: ${({show, theme}) => show ? theme.text.default : theme.box.default};
-background-color: ${({theme}) => theme.box.default};
+color: ${({ show, theme }) => show ? theme.text.default : theme.box.default};
+background-color: ${({ theme }) => theme.box.default};
 padding: .4em;
 border-radius: 9px;
 text-align: center;

@@ -20,12 +20,12 @@ line-height: normal;
 
 -webkit-appearance: none;
 
-color: ${({theme}) => theme.text.sub};
+color: ${({ theme }) => theme.text.sub};
 font-size: 1.1rem;
 margin-right: 1em;
 
 `
 
-const SwitchButton = ({to, icon, text}) => <Link to={to}><StyledButton>{icon} {text}</StyledButton></Link>
+const SwitchButton = ({ to, icon, text }) => <Link to={to}><StyledButton>{icon} {text}</StyledButton></Link>
 
 export default SwitchButton
