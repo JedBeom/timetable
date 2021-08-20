@@ -12,15 +12,18 @@ import useInterval from "utils/useInterval"
 const CardView = () => {
 	const [order, setOrder] = useState()
 	const [subjects, setSubjects] = useState(SkSubjectsWeek)
-	const [weekday, setWeekday] = useState()
+	const [weekday, setWeekday] = useState(0)
+	const [loading, setLoading] = useState(true)
+
+	const refresh = () => {
+		setOrder(isBeforeIndexOfNow(Ends) - 1)
+		setWeekday(getDay() - 1)
+	}
+
 	const get = async () => {
 		const timetable = await getProcessedSubjects()
 		setSubjects(timetable.Subjects)
-	}
-
-	const refresh = () => {
-		setOrder(isBeforeIndexOfNow(Ends))
-		setWeekday(getDay())
+		setLoading(false)
 	}
 
 	useInterval(refresh, 30 * 1000) // 30 seconds
@@ -31,10 +34,13 @@ const CardView = () => {
 	}, [])
 
 	return <View icon={<Clock />} title="시간표" headerRight={<SwitchButton to="/full" icon={<Maximize />} text="전체 보기" />}>
-		{weekday !== 0 && weekday !== 6 ?
-			(order !== -1 ?
-				<Card order={order} subject={weekday ? subjects[weekday - 1][order - 1] : undefined} /> : "수업이 없어요") :
-			"주말입니다"}
+		{loading ? null :
+
+			(weekday !== 0 && weekday !== 6 ?
+				(order !== -1 ?
+					<Card order={order + 1} subject={subjects[weekday][order]} /> : "수업이 없어요") :
+				"주말입니다")
+		}
 	</View>
 }
 
