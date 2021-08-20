@@ -25,6 +25,14 @@ export const strSesToTime = ses => {
     return ses
 }
 
+export const strsToTime = a => {
+    for (let i = 0; i < a.length; i++) {
+        a[i] = parseTextToTime(a[i])
+    }
+
+    return a
+}
+
 export const isBetween = (se, time) => {
     return se.s <= time && time <= se.e
 }
@@ -42,3 +50,17 @@ export const sesIndexOf = (ses, time) => {
 export const sesIndexOfNow = ses => {
     return sesIndexOf(ses, parseDateToTime(new Date()))
 }
+
+export const isBeforeIndexOf = (ends, time) => {
+    for (let i = 0; i < ends.length; i++) {
+        if (time <= ends[i]) return i
+    }
+
+    return -1
+}
+
+export const isBeforeIndexOfNow = ends => {
+    return isBeforeIndexOf(ends, parseDateToTime(new Date()))
+}
+
+export const getDay = () => new Date().getDay()

@@ -14,6 +14,8 @@ export const SesText = [
 // deep clone of SesText
 export const Ses = strSesToTime(JSON.parse(JSON.stringify(SesText)))
 
+export const Ends = [5].concat(Ses.map(e => e.e))
+
 export const HangulWorkdays = [
     "", "월", "화", "수", "목", "금"
 ]

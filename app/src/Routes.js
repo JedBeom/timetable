@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom"
 import Home from "pages/App"
 import NewRoute from "pages/new/NewRoute"
-import CardView from "pages/tables/Card"
+import CardView from "pages/tables/Cards"
 import FullView from "pages/tables/Full"
 
 const Routes = () => {

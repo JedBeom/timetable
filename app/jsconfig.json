@@ -3,8 +3,13 @@
     "baseUrl": "src",
     "target": "es6"
   },
-  "include": ["src"],
+  "include": [
+    "src"
+  ],
   "typeAcquisition": {
-    "exclude": ["dotenv"]
+    "exclude": [
+      "dotenv",
+      "node_modules"
+    ]
   }
 }

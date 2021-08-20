@@ -15,7 +15,7 @@ const theme = {
         bg: "#17171B",
         box: {
             default: "#2C2C36",
-            primary: "#2C2C36"
+            primary: "#423D46"
         },
         text: {
             default: "#FFFFFF",

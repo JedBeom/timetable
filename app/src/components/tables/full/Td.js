@@ -1,12 +1,12 @@
 import styled from "styled-components"
-import { MapPin, User } from "../../../../node_modules/react-feather/dist/index"
+import { Room, Teacher } from "../Details"
 
 const Td = ({ today, subject }) => {
     return <WrapTd show={subject.ShortName}>
         <WrapDiv>
             <Name>{subject.ShortName}</Name>
-            {subject.Teacher ? <Teacher><User />{subject.Teacher}</Teacher> : null}
-            {subject.Room ? <Room><MapPin />{subject.Room}</Room> : null}
+            <Teacher>{subject.Teacher}</Teacher>
+            <Room>{subject.Room}</Room>
         </WrapDiv>
     </WrapTd>
 }
@@ -22,11 +22,14 @@ word-break: keep-all;
 `
 
 const WrapDiv = styled.div`
-min-width: 3.5rem;
+width: 4em;
 height: 4em;
+
+margin: 0 auto;
 
 transition: all .25s;
 transition-timing-function: ease-in;
+text-align: center;
 `
 
 const Name = styled.p`
@@ -35,16 +38,5 @@ margin-top: .5em;
 margin-bottom: .5em;
 font-weight: 600;
 `
-
-const Teacher = styled.p`
-display: block;
-margin-top: 0;
-margin-bottom: .25em;
-
-font-weight: 300;
-font-size: .75em;
-`
-
-const Room = Teacher
 
 export default Td
