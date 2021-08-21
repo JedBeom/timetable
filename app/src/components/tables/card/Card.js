@@ -23,7 +23,7 @@ flex-direction: column;
 
 const Card = ({ order, subject }) => {
 	return <StyledCard active>
-		<SubjectName><Order>{order}교시</Order> {subject.FullName}</SubjectName>
+		{order ? <SubjectName><Order>{order}교시</Order> {subject.FullName}</SubjectName> : null}
 		<DetailWrapper>
 			<Teacher>{subject.Teacher} 선생님</Teacher>
 			<Room>{subject.Room}</Room>

@@ -5,7 +5,7 @@ import { Ends } from "define/times"
 import { useEffect, useState } from "react"
 import View from "ui/View"
 import { getDay, isBeforeIndexOfNow } from "utils/times"
-import { Clock, Maximize } from "react-feather"
+import { Clock, Maximize, BookOpen } from "react-feather"
 import { SkSubjectsWeek } from "define/skeletons"
 import useInterval from "utils/useInterval"
 
@@ -33,15 +33,17 @@ const CardView = () => {
 		get()
 	}, [])
 
-	return <View icon={<Clock />} title="시간표" headerRight={<SwitchButton to="/full" icon={<Maximize />} text="전체 보기" />}>
-		{loading ? null :
+	if (loading) return <Page />
 
-			(weekday !== 0 && weekday !== 6 ?
-				(order !== -1 ?
-					<Card order={order + 1} subject={subjects[weekday][order]} /> : "수업이 없어요") :
-				"주말입니다")
-		}
-	</View>
+	return <Page>
+		{weekday !== -1 && weekday !== 5 ?
+			(order !== -1 ?
+				<Card order={order + 1} subject={subjects && subjects[weekday][order]} /> : "수업이 없어요") :
+			<><BookOpen /> 주말이에요.</>}
+	</Page>
 }
+
+const Page = ({ children }) => <View icon={<Clock />} title="시간표" headerRight={<SwitchButton to="/full" icon={<Maximize />} text="전체 보기" />}>{children}</View>
+
 
 export default CardView
