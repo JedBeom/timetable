@@ -43,7 +43,7 @@ const CardView = () => {
 	return <Page>
 		{weekday !== -1 && weekday !== 5 ?
 			(order !== -1 ?
-				subjects && subjects[weekday].slice(order).map((s, i) => <Card active={i == 0} order={order + i + 1} subject={s} se={Ses[order + i]} time={now} />) : "수업이 없어요") :
+				subjects && subjects[weekday].slice(order).map((s, i) => <Card active={i === 0} order={order + i + 1} subject={s} se={Ses[order + i]} time={now} />) : "수업이 없어요") :
 			<><BookOpen /> 주말이에요.</>}
 	</Page>
 }
