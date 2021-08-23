@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import View from "ui/View"
 import { Clock, Layers } from "../../../node_modules/react-feather/dist/index"
 import SwitchButton from "components/SwitchButton"
+import lscache from "lscache"
+import { LastViewKey } from "define/etc"
 
 const FullView = () => {
     const [subjects, setSubjects] = useState()
@@ -13,6 +15,7 @@ const FullView = () => {
     }
 
     useEffect(() => {
+        lscache.set(LastViewKey, "full")
         get()
     }, [])
 

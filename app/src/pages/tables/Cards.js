@@ -8,6 +8,8 @@ import { getDay, isBeforeIndexOf, parseDateToTime } from "utils/times"
 import { Clock, Maximize, BookOpen } from "react-feather"
 import { SkSubjectsWeek } from "define/skeletons"
 import useInterval from "utils/useInterval"
+import { LastViewKey } from "define/etc"
+import lscache from "lscache"
 
 const CardView = () => {
 	const [order, setOrder] = useState()
@@ -32,6 +34,7 @@ const CardView = () => {
 	useInterval(refresh, 30 * 1000) // 30 seconds
 
 	useEffect(() => {
+		lscache.set(LastViewKey, "card")
 		refresh()
 		get()
 	}, [])
