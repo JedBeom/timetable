@@ -3,7 +3,7 @@ const parseTextToTime = text => {
     return h + (m / 60)
 }
 
-const parseDateToTime = date => {
+export const parseDateToTime = date => {
     return date.getHours() + date.getMinutes() / 60
 }
 
@@ -31,6 +31,17 @@ export const strsToTime = a => {
     }
 
     return a
+}
+
+export const timeToHM = time => {
+    let h = parseInt(time)
+    let m = Math.round((time % 1) * 60)
+
+    if (h === 0) {
+        return `${m}분`
+    }
+
+    return `${h}시간 ${m}분`
 }
 
 export const isBetween = (se, time) => {
@@ -64,3 +75,9 @@ export const isBeforeIndexOfNow = ends => {
 }
 
 export const getDay = () => new Date().getDay()
+
+export const timeAgo = (se, time) => {
+    if (time <= se.s) return `시작까지 ${timeToHM(se.s - time)}`
+    else if (isBetween(se, time)) return `${timeToHM(se.e - time)} 후 종료`
+    return `${timeToHM(time - se.e)} 전에 종료됨`
+}

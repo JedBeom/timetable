@@ -1,22 +1,25 @@
 import { getProcessedSubjects } from "api/api"
 import SwitchButton from "components/SwitchButton"
 import Card from "components/tables/card/Card"
-import { Ends } from "define/times"
+import { Ends, Ses } from "define/times"
 import { useEffect, useState } from "react"
 import View from "ui/View"
-import { getDay, isBeforeIndexOfNow } from "utils/times"
+import { getDay, isBeforeIndexOf, parseDateToTime } from "utils/times"
 import { Clock, Maximize, BookOpen } from "react-feather"
 import { SkSubjectsWeek } from "define/skeletons"
 import useInterval from "utils/useInterval"
 
 const CardView = () => {
 	const [order, setOrder] = useState()
+	const [now, setNow] = useState()
 	const [subjects, setSubjects] = useState(SkSubjectsWeek)
 	const [weekday, setWeekday] = useState(0)
 	const [loading, setLoading] = useState(true)
 
 	const refresh = () => {
-		setOrder(isBeforeIndexOfNow(Ends) - 1)
+		const noww = parseDateToTime(new Date())
+		setNow(noww)
+		setOrder(isBeforeIndexOf(Ends, noww) - 1)
 		setWeekday(getDay() - 1)
 	}
 
@@ -35,10 +38,12 @@ const CardView = () => {
 
 	if (loading) return <Page />
 
+	console.log("cards", order, Ses)
+
 	return <Page>
 		{weekday !== -1 && weekday !== 5 ?
 			(order !== -1 ?
-				<Card order={order + 1} subject={subjects && subjects[weekday][order]} /> : "수업이 없어요") :
+				subjects && subjects[weekday].slice(order).map((s, i) => <Card order={order + i + 1} subject={s} se={Ses[order + i]} time={now} />) : "수업이 없어요") :
 			<><BookOpen /> 주말이에요.</>}
 	</Page>
 }

@@ -1,6 +1,7 @@
 import { SkSubject } from "define/skeletons";
 import styled from "styled-components";
-import { Room, Teacher } from "../Details";
+import { timeAgo } from "utils/times";
+import { Clock, Room, Teacher } from "../Details";
 
 const StyledCard = styled.div`
 padding: .5rem;
@@ -13,6 +14,7 @@ font-size: 1.25rem;
 
 margin-left: auto;
 margin-right: auto;
+margin-bottom: 1em;
 height: 7rem;
 
 display: flex;
@@ -21,12 +23,13 @@ justify-content: center;
 flex-direction: column;
 `
 
-const Card = ({ order, subject }) => {
-	return <StyledCard active>
+const Card = ({ order, subject, se, time, active }) => {
+	return <StyledCard active={active}>
 		{order ? <SubjectName><Order>{order}교시</Order> {subject.FullName}</SubjectName> : null}
 		<DetailWrapper>
-			<Teacher>{subject.Teacher} 선생님</Teacher>
+			<Teacher>{subject.Teacher}</Teacher>
 			<Room>{subject.Room}</Room>
+			<Clock>{timeAgo(se, time)}</Clock>
 		</DetailWrapper>
 	</StyledCard>
 }
