@@ -20,7 +20,7 @@ const getTimetable = async (Grade, Class) => {
 }
 
 const mockElectiveSubjectsToUser = {
-    [Art]: 0,
+    [Art]: 16,
     [Foreign]: 25,
     [ElecA]: 12,
     [ElecB]: 13,
