@@ -1,0 +1,289 @@
+{
+  "Art": [
+    {
+      "Room": "음실",
+      "Subject": "음악",
+      "SubjectFullname": "음악",
+      "Teacher": "송현미"
+    },
+    {
+      "Room": "미실",
+      "Subject": "미술",
+      "SubjectFullname": "미술",
+      "Teacher": "성은우"
+    }
+  ],
+  "Foreign-1": [
+    {}
+  ],
+  "Foreign-2": [
+    {
+      "Room": "2-6",
+      "Subject": "중어16",
+      "SubjectFullname": "중국어 1/6반",
+      "Teacher": "정에셀"
+    },
+    {
+      "Room": "2-3",
+      "Subject": "중어23",
+      "SubjectFullname": "중국어 2/3반",
+      "Teacher": "정에셀"
+    },
+    {
+      "Room": "2-7",
+      "Subject": "중어47",
+      "SubjectFullname": "중국어 4/7반",
+      "Teacher": "정에셀"
+    },
+    {
+      "Room": "2-5",
+      "Subject": "중어58",
+      "SubjectFullname": "중국어 5/8반",
+      "Teacher": "정에셀"
+    },
+    {
+      "Room": "2-1",
+      "Subject": "일어16",
+      "SubjectFullname": "일본어 1/6반",
+      "Teacher": "박효정"
+    },
+    {
+      "Room": "2-2",
+      "Subject": "일어23",
+      "SubjectFullname": "일본어 2/3반",
+      "Teacher": "박효정"
+    },
+    {
+      "Room": "2-4",
+      "Subject": "일어47",
+      "SubjectFullname": "일본어 4/7반",
+      "Teacher": "박효정"
+    },
+    {
+      "Room": "2-8",
+      "Subject": "일어58",
+      "SubjectFullname": "일본어 5/8반",
+      "Teacher": "박효정"
+    }
+  ],
+  "Foreign-3": [
+    {
+      "Subject": "일본어",
+      "Teacher": "박효정",
+      "Room": "다목적Ⅲ"
+    },
+    {
+      "Subject": "중국어",
+      "Teacher": "정에셀",
+      "Room": "다목적Ⅲ"
+    },
+    {
+      "Subject": "공학",
+      "Teacher": "최용보",
+      "Room": "다목적Ⅲ"
+    }
+  ],
+  "Extra": [
+    {
+      "Subject": "민주",
+      "Teacher": "이원규",
+      "Room": "구3-7"
+    },
+    {
+      "Subject": "심리",
+      "Teacher": "정진욱",
+      "Room": "구3-6"
+    },
+    {
+      "Subject": "보건",
+      "Teacher": "조서윤",
+      "Room": "구3-7"
+    },
+	{
+      "Subject": "진직",
+      "Teacher": "담당"
+	}
+  ],
+  "Credit-1": [
+    {}
+  ],
+  "Credit-2": [
+    {
+      "Room": "2-7",
+      "Subject": "화작",
+      "SubjectFullname": "화법과 작문",
+      "Teacher": "김미야"
+    },
+    {
+      "Room": "2-1",
+      "Subject": "언매",
+      "SubjectFullname": "언어와 매체",
+      "Teacher": "강현희"
+    },
+    {
+      "Room": "2-6",
+      "Subject": "확통",
+      "SubjectFullname": "확률과 통계",
+      "Teacher": "이대희"
+    },
+    {
+      "Room": "수학과실",
+      "Subject": "기하",
+      "SubjectFullname": "기하",
+      "Teacher": "정장균"
+    },
+    {
+      "Room": "2-2",
+      "Subject": "영문",
+      "SubjectFullname": "영어권문화",
+      "Teacher": ""
+    },
+    {
+      "Room": "어학실",
+      "Subject": "영미",
+      "SubjectFullname": "영미문학읽기",
+      "Teacher": "반착한"
+    },
+    {
+      "Room": "심수실",
+      "Subject": "심수Ⅱ",
+      "SubjectFullname": "심화수학Ⅱ",
+      "Teacher": "하성영"
+    },
+    {
+      "Room": "2-4",
+      "Subject": "세지",
+      "SubjectFullname": "세계지리",
+      "Teacher": "윤혜연"
+    },
+    {
+      "Room": "2-2",
+      "Subject": "동사",
+      "SubjectFullname": "동아시아사",
+      "Teacher": "강성길"
+    },
+    {
+      "Room": "2-5",
+      "Subject": "경제",
+      "SubjectFullname": "경제",
+      "Teacher": "신지영"
+    },
+    {
+      "Room": "2-8",
+      "Subject": "사문",
+      "SubjectFullname": "사회문화",
+      "Teacher": "이현호"
+    },
+    {
+      "Room": "2-3",
+      "Subject": "화Ⅱ",
+      "SubjectFullname": "화학Ⅱ",
+      "Teacher": "김창수"
+    },
+    {
+      "Room": "2-6",
+      "Subject": "물Ⅱ",
+      "SubjectFullname": "물리학Ⅱ",
+      "Teacher": "이원규"
+    },
+    {
+      "Room": "생명실",
+      "Subject": "생Ⅰ",
+      "SubjectFullname": "생명과학Ⅰ",
+      "Teacher": "오미영"
+    },
+    {
+      "Room": "생명실",
+      "Subject": "생Ⅱ",
+      "SubjectFullname": "생명과학Ⅱ",
+      "Teacher": "오미영"
+    },
+    {
+      "Room": "지학실",
+      "Subject": "지Ⅰ",
+      "SubjectFullname": "지구과학Ⅰ",
+      "Teacher": "최경아"
+    }
+  ],
+  "Credit-3": [
+    {
+      "Subject": "자습",
+      "Teacher": "담당"
+    },
+    {
+      "Subject": "고급Ⅰ",
+      "Teacher": "고건희",
+      "Room": "3-1"
+    },
+    {
+      "Subject": "물리Ⅱ",
+      "Teacher": "권선영",
+      "Room": "3-2"
+    },
+    {
+      "Subject": "지구Ⅱ",
+      "Teacher": "유병수",
+      "Room": "3-3"
+    },
+    {
+      "Subject": "문매A",
+      "Teacher": "성락용",
+      "Room": "3-4"
+    },
+    {
+      "Subject": "문매C",
+      "Teacher": "박소은",
+      "Room": "3-4"
+    },
+    {
+      "Subject": "화학Ⅱ",
+      "Teacher": "이민숙",
+      "Room": "화학실"
+    },
+    {
+      "Subject": "경제",
+      "Teacher": "정주영",
+      "Room": "3-5"
+    },
+    {
+      "Subject": "생명Ⅱ",
+      "Teacher": "김신예",
+      "Room": "3-6"
+    },
+    {
+      "Subject": "세계",
+      "Teacher": "강성길",
+      "Room": "3-7"
+    },
+    {
+      "Subject": "정치",
+      "Teacher": "곽진주",
+      "Room": "다목적2"
+    },
+    {
+      "Subject": "현대",
+      "Teacher": "정진욱",
+      "Room": "3-8"
+    },
+    {
+      "Subject": "국제",
+      "Teacher": "신지영",
+      "Room": "3-9"
+    },
+    {
+      "Subject": "고전",
+      "Teacher": "김미야",
+      "Room": "3-9"
+    },
+    {
+      "Subject": "사문",
+      "Teacher": "임두봉",
+      "Room": "사회과실"
+    },
+    {
+      "Subject": "기하",
+      "Teacher": "정장균",
+      "Room": "수학과실"
+    }
+  ]
+}
